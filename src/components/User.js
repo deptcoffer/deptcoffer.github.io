@@ -52,14 +52,14 @@ function request(){
 var num=1;
 
     users.forEach((users)=>{
-        alert(num);
         if(key===users.key){
             if(users.req_num){  
-                alert(num);
                 num = users.req_num+1;
             }else{
                 num = 1;
-                alert(num);
+            }
+            if(users.sup_req==="true"){
+                document.querySelector('.')
             }
             
         }
@@ -68,7 +68,7 @@ var num=1;
 
 if(req_title && req_subject && req_describtion){
     const sentRequest = async () => {
-        await addDoc(usersCollectionRef, {key: key,req_num : num, req_title: req_title, req_subject: req_subject, req_describtion: req_describtion, Name : name});
+        await addDoc(usersCollectionRef, {key: key,req_num : num, req_title: req_title, req_subject: req_subject, req_describtion: req_describtion, Name : name , sup_req : "false", admin_req: "false"});
     };
 
     sentRequest();
@@ -85,16 +85,7 @@ if(req_title && req_subject && req_describtion){
             navigate(`/`);
     }
 
-    // function submit(){
-    //     if(!localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_req`)){
-    //         localStorage.setItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_req`,1)
-    //     }else{
-    //         var req = parseInt(localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_req`));
-    //     }
 
-    //     localStorage.setItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_title_${req}`,"leave letter");
-    //     req++;
-    // }
 
 
 
@@ -108,7 +99,7 @@ if(req_title && req_subject && req_describtion){
         <br></br>
         <div id='hi'>
         <h1>Request Status</h1>
-        <p className='para'>No request found</p>
+        {/* <p className='para'>No request found</p> */}
         <table>
             <tr>
                 <th>S.No</th>
@@ -119,8 +110,8 @@ if(req_title && req_subject && req_describtion){
             <tr>
                 <td>1</td>
                 <td>On-Duty</td>
-                <td><button className="btn btn-success" type="submit">Approved</button></td>
-                <td><button className="btn btn-danger" type="submit">Pending</button></td>
+                <td><button className="sup btn btn-success" type="submit">Approved</button></td>
+                <td><button className="admin btn btn-danger" type="submit">Pending</button></td>
             </tr>
         </table>
         <br></br>
@@ -166,4 +157,6 @@ if(req_title && req_subject && req_describtion){
 
     </div>
     );
+
+
 }

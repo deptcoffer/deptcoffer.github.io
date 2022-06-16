@@ -17,7 +17,7 @@ export default function Sign(){
     const [code, setCode] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setconfirmPassword] = useState();
-    const [mail, setMail] = useState(localStorage.getItem(`${localStorage.getItem("current")}`));
+    const [mail, setMail] = useState(localStorage.getItem(`mail`));
 
 
 
@@ -91,7 +91,7 @@ const createusers = async () => {
 createusers();
 
 
-                            navigate('/password');
+                            navigate('/');
                 
                                                 
     }

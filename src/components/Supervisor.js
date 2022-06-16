@@ -19,7 +19,7 @@ export default function Supervisor(){
             </div>
             <div className='pen1'>
         <h1 className='h14'>Pending request</h1>
-        <p className='para2'>No request found for approval</p>
+        {/* <p className='para2'>No request found for approval</p> */}
         <br></br>
         <table className='table2'>
             <tr>
