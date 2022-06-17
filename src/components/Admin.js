@@ -25,7 +25,7 @@ export default function Admin(){
       </div>
      
       <div className='pen'>
-        <h1 className='h13'>Pending requests</h1>
+        <h1 className='h13'>Request Status</h1>
         {/* <p className='para1'>No request found for approval</p> */}
         </div>
         <div className='tableContent'>

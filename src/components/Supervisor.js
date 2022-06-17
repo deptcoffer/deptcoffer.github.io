@@ -13,12 +13,12 @@ export default function Supervisor(){
     return(
     <div>
         <div className='msg3'>
-        <p id="greet3">Welcome </p>
-           <p id="user_name3"> {localStorage.getItem(`name`)} </p>
-            <p id="pro2">to DeptCoffer</p>
+        <p><span id="greet3">Welcome </span>
+           <b id="user_name3"> {localStorage.getItem(`name`)} </b>
+            <span id="pro2">to DeptCoffer</span></p>
             </div>
             <div className='pen1'>
-        <h1 className='h14'>Pending request</h1>
+        <h1 className='h14'>Request Status</h1>
         {/* <p className='para2'>No request found for approval</p> */}
         <br></br>
         <table className='table2'>
